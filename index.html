@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Adrian Store</title>
+
+<script src="https://cdn.tailwindcss.com"></script>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:#050505;
+color:white;
+overflow-x:hidden;
+}
+
+.bg1{
+position:absolute;
+width:400px;
+height:400px;
+background:#7c3aed;
+filter:blur(150px);
+opacity:.25;
+top:-100px;
+left:-100px;
+z-index:-1;
+}
+
+.bg2{
+position:absolute;
+width:400px;
+height:400px;
+background:#2563eb;
+filter:blur(150px);
+opacity:.25;
+bottom:-100px;
+right:-100px;
+z-index:-1;
+}
+
+.navbar{
+backdrop-filter:blur(15px);
+background:rgba(255,255,255,.03);
+border-bottom:1px solid rgba(255,255,255,.07);
+}
+
+.card{
+background:rgba(255,255,255,.03);
+border:1px solid rgba(255,255,255,.07);
+transition:.3s;
+backdrop-filter:blur(10px);
+}
+
+.card:hover{
+transform:translateY(-7px);
+border-color:#7c3aed;
+box-shadow:0 0 30px #7c3aed55;
+}
+
+.glow{
+box-shadow:0 0 20px #7c3aed88;
+}
+
+.btn{
+transition:.3s;
+}
+
+.btn:hover{
+transform:scale(1.05);
+}
+
+.hero-title{
+line-height:1.1;
+}
+
+</style>
+</head>
+<body>
+
+<div class="bg1"></div>
+<div class="bg2"></div>
+
+<!-- NAVBAR -->
+
+<nav class="navbar fixed top-0 left-0 w-full z-50 px-6 md:px-16 py-5 flex items-center justify-between">
+
+<div class="flex items-center gap-3">
+
+<div class="w-10 h-10 rounded-2xl bg-purple-600 glow"></div>
+
+<h1 class="text-2xl font-bold">
+ADRIANSTORE
+</h1>
+
+</div>
+
+<div class="hidden md:flex items-center gap-10 text-sm text-gray-300">
+
+<a href="#" class="hover:text-purple-400">Home</a>
+<a href="#" class="hover:text-purple-400">Products</a>
+<a href="#" class="hover:text-purple-400">Pricing</a>
+<a href="#" class="hover:text-purple-400">Contact</a>
+
+</div>
+
+<div class="flex items-center gap-3">
+
+<button class="px-5 py-2 rounded-xl border border-white/10 hover:bg-white/10 btn">
+Login
+</button>
+
+<button class="bg-purple-600 px-5 py-2 rounded-xl glow btn">
+Register
+</button>
+
+</div>
+
+</nav>
+
+<!-- HERO -->
+
+<section class="min-h-screen flex items-center justify-center px-6 pt-32">
+
+<div class="max-w-7xl w-full grid md:grid-cols-2 gap-20 items-center">
+
+<div>
+
+<div class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-purple-500/20 bg-purple-500/10 text-purple-300 text-sm mb-7">
+
+<span>🔥</span>
+BEST DIGITAL STORE
+
+</div>
+
+<h1 class="hero-title text-5xl md:text-7xl font-extrabold">
+
+Modern Store <br>
+
+<span class="text-purple-500">
+Website UI
+</span>
+
+</h1>
+
+<p class="text-gray-400 mt-7 text-lg leading-relaxed max-w-xl">
+
+Website digital modern dengan design premium,
+responsive dan tampilan elegan seperti store profesional.
+
+</p>
+
+<div class="flex gap-4 mt-10">
+
+<button class="bg-purple-600 px-7 py-4 rounded-2xl glow btn font-semibold">
+Get Started
+</button>
+
+<button class="border border-white/10 px-7 py-4 rounded-2xl hover:bg-white/10 btn">
+Explore
+</button>
+
+</div>
+
+<div class="flex gap-10 mt-14">
+
+<div>
+<h2 class="text-3xl font-bold">10K+</h2>
+<p class="text-gray-500 text-sm">Customers</p>
+</div>
+
+<div>
+<h2 class="text-3xl font-bold">4.9</h2>
+<p class="text-gray-500 text-sm">Rating</p>
+</div>
+
+<div>
+<h2 class="text-3xl font-bold">24/7</h2>
+<p class="text-gray-500 text-sm">Support</p>
+</div>
+
+</div>
+
+</div>
+
+<!-- RIGHT -->
+
+<div class="relative">
+
+<div class="absolute inset-0 bg-purple-600 blur-[120px] opacity-20"></div>
+
+<div class="card rounded-[35px] p-6 relative">
+
+<img
+src="https://images.unsplash.com/photo-1542751371-adc38448a05e?q=80&w=1200"
+class="rounded-[25px] h-[420px] object-cover w-full"
+>
+
+<div class="grid grid-cols-2 gap-5 mt-5">
+
+<div class="card rounded-3xl p-5">
+
+<p class="text-gray-400 text-sm">
+Premium Panel
+</p>
+
+<h2 class="text-2xl font-bold mt-2">
+Rp10K
+</h2>
+
+<button class="bg-purple-600 mt-5 w-full py-3 rounded-xl">
+Buy Now
+</button>
+
+</div>
+
+<div class="card rounded-3xl p-5">
+
+<p class="text-gray-400 text-sm">
+Website Store
+</p>
+
+<h2 class="text-2xl font-bold mt-2">
+Rp25K
+</h2>
+
+<button class="bg-purple-600 mt-5 w-full py-3 rounded-xl">
+Buy Now
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- PRODUCTS -->
+
+<section class="px-6 md:px-16 py-24">
+
+<div class="flex items-center justify-between mb-12">
+
+<div>
+<h2 class="text-4xl font-bold">
+Popular Products
+</h2>
+
+<p class="text-gray-500 mt-2">
+Produk digital terbaik kami.
+</p>
+</div>
+
+<button class="border border-white/10 px-5 py-3 rounded-2xl hover:bg-white/10">
+View All
+</button>
+
+</div>
+
+<div class="grid md:grid-cols-3 gap-8">
+
+<!-- CARD -->
+
+<div class="card rounded-[30px] overflow-hidden">
+
+<img
+src="https://images.unsplash.com/photo-1511512578047-dfb367046420?q=80&w=1200"
+class="h-60 w-full object-cover"
+>
+
+<div class="p-6">
+
+<h2 class="text-2xl font-bold">
+Website Premium
+</h2>
+
+<p class="text-gray-400 mt-3">
+Template website modern dan responsive.
+</p>
+
+<div class="flex items-center justify-between mt-7">
+
+<h1 class="text-3xl font-bold text-purple-400">
+Rp15K
+</h1>
+
+<button class="bg-purple-600 px-5 py-3 rounded-xl">
+Buy
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- CARD -->
+
+<div class="card rounded-[30px] overflow-hidden">
+
+<img
+src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=1200"
+class="h-60 w-full object-cover"
+>
+
+<div class="p-6">
+
+<h2 class="text-2xl font-bold">
+Bot WhatsApp
+</h2>
+
+<p class="text-gray-400 mt-3">
+Bot otomatis premium fitur lengkap.
+</p>
+
+<div class="flex items-center justify-between mt-7">
+
+<h1 class="text-3xl font-bold text-purple-400">
+Rp20K
+</h1>
+
+<button class="bg-purple-600 px-5 py-3 rounded-xl">
+Buy
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- CARD -->
+
+<div class="card rounded-[30px] overflow-hidden">
+
+<img
+src="https://images.unsplash.com/photo-1560419015-7c427e8ae5ba?q=80&w=1200"
+class="h-60 w-full object-cover"
+>
+
+<div class="p-6">
+
+<h2 class="text-2xl font-bold">
+Panel Hosting
+</h2>
+
+<p class="text-gray-400 mt-3">
+Hosting cepat dan stabil premium.
+</p>
+
+<div class="flex items-center justify-between mt-7">
+
+<h1 class="text-3xl font-bold text-purple-400">
+Rp10K
+</h1>
+
+<button class="bg-purple-600 px-5 py-3 rounded-xl">
+Buy
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer class="border-t border-white/10 py-10 text-center text-gray-500">
+
+© 2026 AdrianStore — All Rights Reserved.
+
+</footer>
+
+</body>
+</html>
