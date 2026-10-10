@@ -97,7 +97,7 @@ nav {
 .nav-links {
     display: flex;
     align-items: center;
-    gap: 24px;
+    gap: 20px;
 }
 
 .nav-links a {
@@ -110,13 +110,22 @@ nav {
     color: var(--cyan);
 }
 
-/* Tambahan Style untuk Tombol Download Minecraft di Navigasi */
+/* Style Tombol Khusus di Navigasi */
 .nav-mc-btn {
     color: var(--cyan) !important;
     border: 1px solid #40d9ff50;
-    padding: 6px 12px;
+    padding: 6px 10px;
     border-radius: 6px;
     background: #40d9ff0c;
+    font-weight: bold;
+}
+
+.nav-am-btn {
+    color: #ffffff !important;
+    border: 1px solid #1677ff;
+    padding: 6px 10px;
+    border-radius: 6px;
+    background: linear-gradient(120deg, #1768ed, #168eea);
     font-weight: bold;
 }
 
@@ -473,7 +482,7 @@ footer p {
         right: 0;
         padding: 25px;
         flex-direction: column;
-        gap: 22px;
+        gap: 18px;
         background: #07111f;
         border-bottom: 1px solid var(--border);
     }
@@ -533,8 +542,9 @@ footer p {
         <a href="#games" onclick="closeMenu()">Games</a>
         <a href="#videos" onclick="closeMenu()">YouTube</a>
         <a href="#community" onclick="closeMenu()">Community</a>
-        <!-- Tombol Menu Download Minecraft Baru -->
         <a href="https://orinminecraft.netlify.app/" target="_blank" rel="noopener" class="nav-mc-btn" onclick="closeMenu()">📥 Download Minecraft</a>
+        <!-- Tombol Menu Order AM Premium Baru -->
+        <a href="https://orinamprem.netlify.app/" target="_blank" rel="noopener" class="nav-am-btn" onclick="closeMenu()">✨ Order AM Premium</a>
     </div>
 </nav>
 
@@ -563,11 +573,18 @@ footer p {
                 ▶ WATCH YOUTUBE
             </a>
 
-            <!-- Tombol Tambahan Download Minecraft di Hero Banner -->
             <a class="btn btn-outline"
                href="https://orinminecraft.netlify.app/"
                target="_blank" rel="noopener">
                 📥 DOWNLOAD MINECRAFT
+            </a>
+
+            <!-- Tombol Tambahan Order AM Premium di Hero Banner -->
+            <a class="btn btn-primary"
+               href="https://orinamprem.netlify.app/"
+               target="_blank" rel="noopener"
+               style="background: linear-gradient(120deg, #7b2cbf, #9d4edd);">
+                ✨ ORDER AM PREMIUM
             </a>
 
             <a class="btn btn-outline"
