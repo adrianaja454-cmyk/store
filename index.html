@@ -33,6 +33,7 @@ body{
   background:transparent;
   color:var(--white);
   overflow-x:hidden;
+  position:relative;
 }
 
 a{
@@ -40,27 +41,31 @@ a{
   color:inherit;
 }
 
-/* ===== UNDERWATER VIDEO BACKGROUND ===== */
+/* ===== UNDERWATER IMAGE BACKGROUND WITH FADE GRADIENT ===== */
 
-.ocean-video{
-  position:fixed;
-  inset:0;
+.ocean-bg{
+  position:absolute;
+  top:0;
+  left:0;
   width:100%;
-  height:100%;
+  height:100vh;
   overflow:hidden;
   z-index:-10;
   pointer-events:none;
   background:#02030a;
 }
 
-.ocean-video video{
+.ocean-bg img{
   width:100%;
   height:100%;
   object-fit:cover;
-  object-position:center;
+  object-position:center top;
+  /* Efek gradasi pudar ke bawah */
+  -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,0.6) 40%, rgba(0,0,0,0) 80%);
+  mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,0.6) 40%, rgba(0,0,0,0) 80%);
 }
 
-/* Cahaya biru di atas, gelap di bawah */
+/* Overlay tambahan buat ngejaga tone warna gelapnya */
 .ocean-overlay{
   position:fixed;
   inset:0;
@@ -68,10 +73,10 @@ a{
   pointer-events:none;
   background:linear-gradient(
     to bottom,
-    rgba(0,35,58,.12) 0%,
-    rgba(0,17,34,.30) 32%,
-    rgba(0,6,18,.72) 67%,
-    rgba(1,2,9,.97) 100%
+    rgba(0,35,58,.08) 0%,
+    rgba(0,17,34,.20) 32%,
+    rgba(0,6,18,.85) 67%,
+    rgba(1,2,9,1) 100%
   );
 }
 
@@ -709,11 +714,9 @@ button,
 
 <body>
 
-<!-- VIDEO BACKGROUND LAUT -->
-<div class="ocean-video">
-  <video autoplay muted loop playsinline preload="auto">
-    <source src="https://videy.co/v/?id=3OsyWPql1" type="video/mp4">
-  </video>
+<!-- BACKGROUND GAMBAR (FIXED ZOOM & IKUT SCROLL) -->
+<div class="ocean-bg">
+  <img src="https://files.catbox.moe/lophyo.jpg" alt="Underwater Background">
 </div>
 
 <div class="ocean-overlay"></div>
@@ -883,4 +886,5 @@ enter.onclick = async()=>{
 </script>
 
 </body>
-</html>
+        </html>
+        
